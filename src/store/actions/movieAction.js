@@ -18,7 +18,7 @@ export const fetchMovie = (name) => {
     return async dispatch => {
         dispatch(fetchMoviePending());
         try {
-            const url = `http://www.omdbapi.com/?s=${name}&apikey=deb36338`;
+            const url = `https://www.omdbapi.com/?s=${name}&apikey=deb36338`;
             const response = await fetch(url);
             const result = await response.json(response);
             dispatch(fetchMovieSuccess(result));
